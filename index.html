@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Clock</title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="data:,">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -24,13 +25,14 @@
                 </li>
             </ul>
         </section>
-        <form>
+        <form  id="submit">
             <p id="currentDate"></p>
             <label for="targetDate">Target Date:</label>
-            <input type="date" id="targetDate" name="targetDate" required>
+            <input type="datetime-local" id="targetDate" name="targetDate" required>
+            <input type="submit" value="start!">
         </form>
         <section>
-            <div class="CountdownCloack">
+            <div id="CountdownCloack">
 
             </div>
         </section>
