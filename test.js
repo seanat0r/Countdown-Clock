@@ -1,23 +1,20 @@
-const dateCalculation = () => {
-  //let targetDate = document.getElementById('targetDate').value.getTime;
-  let targetDate = new Date("Jan 5, 2030 15:37:25").getTime();
+const calculation = () => {
+ // current Time
+ let currentTime = new Date();
+ console.log("Time now: ", currentTime);
 
-  const counter = setInterval(0 = () => {
-    const startDate = Date.now();
+ // Duration
+ let durationInMinutes = 1;
 
-    let distance = targetDate - startDate;
+ let durationInMilliseconds = durationInMinutes * 60000;
 
-    //Calculate the The days, hours, minutes and second
-    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ // TargetTime
+ let TargetTime = new Date(currentTime.getTime() + durationInMilliseconds);
+ console.log("Timer ends at: ", TargetTime);
 
-    //display the timer on the web
-    
-  })
-
-};
-
-dateCalculation();
-
+ // Counting
+ setTimeout(function() {
+    console.log("Timer expired! The Targettime is reached: ", TargetTime);
+ }, durationInMilliseconds)
+}
+console.log(calculation());

@@ -10,32 +10,50 @@
 </head>
 <body>
     <header>
-        <nav>
+        <section id="title">
             <h1>Countdown Clock</h1>
-        </nav>
+            <p>
+                Select wich type of Countdown you want to use and set yor target Date or the time to count down.
+            </p>
+        </section>
     </header>
     <main>
-        <section>
+        <nav>
             <ul>
                 <li>
-                    <h2>Date to Date Countdown</h2>
-                </li>
-                <li>
-                 <h2>Number Countdown</h2>
+                    <h2 id="DateToDate">Date to Date Countdown</h2>
+                    <h2 id="NumberCount">Number Countdown</h2>
                 </li>
             </ul>
-        </section>
-        <form  id="submit">
-            <p id="currentDate"></p>
-            <label for="targetDate">Target Date:</label>
-            <input type="datetime-local" id="targetDate" name="targetDate" required>
-            <input type="submit" value="start!">
-        </form>
-        <section>
-            <div id="CountdownCloack">
+        </nav>
+        <div id="DateToDateCountdown">
+            <form  id="submit">
+                <div class="firstRowInput">
+                    <label for="targetDate" id="labelTD">Target Date: </label>
+                    <input type="datetime-local" id="targetDate" name="targetDate" required>
+                </div>
+                <input type="submit" value="Count!" id="submitInput">
+            </form>
+            <section>
+                <div id="CountdownCloack">
+                    
+                </div>
+            </section>
+        </div>
+        <div id="NumberCountCountdown">
+            <form id="submitForCountdown">
+                <div class="firstRowInput">
+                    <label for="appt-time" id="labelNCC">Choose the Time which you need to Count to.</label>
+                    <input type="time" id="appt-time" name="appt-time" required>
+                </div>
+                <input type="submit" value="Count!" id="submitCount">
+            </form>
+            <section>
+                <div id="counter">
 
-            </div>
-        </section>
+                </div>
+            </section>
+        </div>
     </main>
 </body>
 </html>

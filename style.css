@@ -1,0 +1,122 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* TITLE & TEXT */
+header {
+    background-color: #eaeaec;
+}
+#title {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem;
+    align-items: center;
+} 
+section h1 {
+    grid-row: 1 span 1;
+    font-size: 50px;
+    letter-spacing: 5px;
+    align-self: center;
+    text-align: center;
+}
+section p {
+    grid-row: 2 span 1;
+}
+
+/* Navigation */
+nav>ul {
+    width: 100%;
+    background-color: #eaeaec;
+    border-bottom: 1px #000 solid;
+}
+nav>ul>li {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin: 0 3rem 0 3rem;
+}
+nav>ul>li>h2 {
+    border: 1px #eaeaec solid;
+    background-color: #eaeaec;
+}
+#DateToDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 20%;
+    margin-bottom: 1rem;
+    background-color: #bdbdbe;
+    border-radius: 20px;
+}
+#NumberCount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    width: 20%;
+    margin-bottom: 1rem;
+    background-color: #bdbdbe;
+    border-radius: 20px;
+}
+#DateToDate:hover {
+    border: 2px #000 solid;
+}
+#DateToDate:active {
+    background-color: #ffffff;
+}
+#NumberCount:hover {
+    border: 2px #000 solid;
+}
+#NumberCount:active {
+    background-color: #ffffff;
+}
+
+/* FORM */
+#submit, #submitForCountdown {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 50%;
+    margin: 1rem 25% 0 25%;
+}
+#targetDate, #appt-time {
+    width: 12.5rem;
+}
+#submitInput, #submitCount {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    width: 10%;
+    min-width: 3rem;
+    margin: 0.5rem;
+}
+
+#labelTD, #targetDate, #labelNCC, #appt-time {
+    margin: 0.5rem;
+}
+.firstRowInput {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    width: 50%;
+}
+/* COUNTER */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#CountdownCloack, #counter{
+font-size: 10rem;
+
+}
+
+/* Number Countdown */
+#NumberCountCountdown {
+    display: none;
+}
